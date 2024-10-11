@@ -4,13 +4,37 @@ spring:
   application:
     name: SchoolHelp
   datasource:
-    url: jdbc:mysql://localhost:3306/chhelp?userUnicode=true&characterEncoding=utf-8
+    url: jdbc:mysql://localhost:3306/schoolhelp?userUnicode=true&characterEncoding=utf-8
     username: root
     password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
-  #???????????spring:
+  #设置文件上传的大小限制spring:
   servlet:
     multipart:
       enabled: true
       max-file-size: 10MB
       max-request-size: 10MB
+    #设置redis缓存
+  data:
+    redis:
+      host: 8.140.245.174
+      port: 6379
+      database: 1
+      timeout: 10000ms
+      password: Dong@1229
+      lettuce:
+        pool:
+          max-active: 8
+          max-wait: 10000ms
+          max-idle: 8
+          min-idle: 1
+#配置mybatis-plus
+mybatis-plus:
+  type-aliases-package: com.qys.commodity.entity
+  global-config:
+    db-config:
+      id-type: auto #配置主键自增
+
+wxapp:
+  AppID: "wxdd7f37e3c6d2a1ad"
+  AppSecret: "9e1dddbe643cfacd8bb649995678b1ed"
