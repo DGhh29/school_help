@@ -1,5 +1,6 @@
 package com.dg.schoolhelp;
 
+<<<<<<< HEAD
 import com.dg.schoolhelp.utils.TokenUtils;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,16 @@ class SchoolHelpApplicationTests {
         Map<String, String> tokenMap = tokenUtils.tokenMap();
         System.out.println(tokenMap.get("access_token"));
         System.out.println(tokenMap.get("refresh_token"));
+=======
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class SchoolHelpApplicationTests {
+
+    @Test
+    void contextLoads() {
+>>>>>>> origin/SpringBoot
     }
 
 }
